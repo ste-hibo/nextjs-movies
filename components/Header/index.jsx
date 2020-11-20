@@ -1,9 +1,8 @@
-import styled from "@emotion/styled";
-import { rem } from "polished";
 import { Flex, Box } from "reflexbox";
-import Navigation from "components/Navigation";
+import Navigation from "components/Navigation/index";
 import ToggleNavigationColorButton from "components/ToggleNavigationColorButton";
 import Link from "next/link";
+import { StyledHeader } from "./styles";
 
 function Header({ isDark }) {
 	return (
@@ -25,26 +24,5 @@ function Header({ isDark }) {
 		</StyledHeader>
 	);
 }
-
-const StyledHeader = styled.header`
-	background: ${({ isDark, theme }) =>
-		isDark ? theme.colors.primaryDark : theme.colors.primaryLight};
-	padding: 20px;
-
-	.logo {
-		a {
-			display: flex;
-			align-items: center;
-			text-decoration: none;
-		}
-
-		.logo-text {
-			color: #333333;
-			font-weight: bold;
-			font-size: ${rem(20)};
-			margin-left: ${rem(20)};
-		}
-	}
-`;
 
 export default Header;

@@ -1,4 +1,4 @@
-import Header from "components/Header";
+import Header from "components/Header/index";
 import { ThemeProvider } from "emotion-theming";
 import GlobalStyles from "components/GlobalStyles/GlobalStyles";
 import theme from "../theme/theme";
